@@ -1,0 +1,257 @@
+body {
+  text-align: center;
+  background: url("images/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+  the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+  on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+  while the background image is loading */
+  background-color: #464646;
+  color: #E6B800;
+  font-family: helvetica;
+}
+
+p {
+  font-size: 22px;
+}
+
+
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.textfield{
+  border-radius:5px;
+  display: block;
+  margin-right: 15px;
+}
+
+.login {
+  position: absolute;
+  top: -5px;
+  right: 8px;
+  font-size: 24px;
+  color: #888;
+}
+
+.login a {
+  font-family: 'pf-din';
+  text-decoration: underline;
+  color: #888;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.fadeIn {
+  display: block;
+  float: right;
+  display: none;
+}
+
+.home {
+  margin-top: 80px;
+  display: block;
+}
+
+.raksha-button{
+  border-radius: 5px;
+  color: white;
+  background-color: #FF9900;
+  display: block;
+  margin-left: 15px;
+}
+
+.message p{
+  margin-top:20px;
+  color: green;
+  display: none;
+}
+
+.infraRating{
+  display        : inline-block;
+  position       : relative;
+  height         : 24px;
+  background     : url('images/stars.png') repeat-x 0 0;
+  vertical-align : bottom;
+}
+
+.infraRating div{
+  float    : left;
+  position : relative;
+  height   : 24px;
+}
+
+.infraRating input{
+  position : relative;
+  z-index  : 1;
+  width    : 24px;
+  height   : 24px;
+  margin   : 0;
+  padding  : 0;
+  opacity  : 0;
+}
+
+.infraRating label{
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 24px;
+}
+
+.infraRating span{
+  display : none;
+}
+
+.infraRating       input:checked       + label,
+.infraRating:hover input:checked:hover + label{
+  background : url('images/stars.png') repeat-x 0 -24px;
+}
+
+.infraRating:hover input:checked + label{
+  background : transparent;
+}
+
+.infraRating:hover input:hover + label{
+  background : url('images/stars.png') repeat-x 0 -48px;
+}
+
+
+
+.ratingsTable {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+
+
+.starLabel p{
+  font-size: 20px;
+  text-align: left;
+  color: #CCFF66;
+}
+
+
+.securityRating{
+  display        : inline-block;
+  position       : relative;
+  height         : 24px;
+  background     : url('images/stars.png') repeat-x 0 0;
+  vertical-align : bottom;
+}
+
+.securityRating div{
+  float    : left;
+  position : relative;
+  height   : 24px;
+}
+
+.securityRating input{
+  position : relative;
+  z-index  : 1;
+  width    : 24px;
+  height   : 24px;
+  margin   : 0;
+  padding  : 0;
+  opacity  : 0;
+}
+
+.securityRating label{
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 24px;
+}
+
+.securityRating span{
+  display : none;
+}
+
+.securityRating       input:checked       + label,
+.securityRating:hover input:checked:hover + label{
+  background : url('images/stars.png') repeat-x 0 -24px;
+}
+
+.securityRating:hover input:checked + label{
+  background : transparent;
+}
+
+.securityRating:hover input:hover + label{
+  background : url('images/stars.png') repeat-x 0 -48px;
+}
+
+
+.transRating{
+  display        : inline-block;
+  position       : relative;
+  height         : 24px;
+  background     : url('images/stars.png') repeat-x 0 0;
+  vertical-align : bottom;
+}
+
+.transRating div{
+  float    : left;
+  position : relative;
+  height   : 24px;
+}
+
+.transRating input{
+  position : relative;
+  z-index  : 1;
+  width    : 24px;
+  height   : 24px;
+  margin   : 0;
+  padding  : 0;
+  opacity  : 0;
+}
+
+.transRating label{
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 24px;
+}
+
+.transRating span{
+  display : none;
+}
+
+.transRating       input:checked       + label,
+.transRating:hover input:checked:hover + label{
+  background : url('images/stars.png') repeat-x 0 -24px;
+}
+
+.transRating:hover input:checked + label{
+  background : transparent;
+}
+
+.transRating:hover input:hover + label{
+  background : url('images/stars.png') repeat-x 0 -48px;
+}
+
+
+#raksha-submit{
+  background-color: #B8E68A;
+  border-radius: 5px;
+  margin-top: 15px;
+}

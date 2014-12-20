@@ -1,0 +1,131 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="{% static 'pybachao/style.css' %}" />
+
+<script src="{% static 'pybachao/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'pybachao/utils.js' %}" type="text/javascript"></script>
+<script>
+
+</script>
+
+
+<title>AreaRakshak</title>
+<div class="fadeIn">
+  <h2 class="login">Login with <a href="/">Email</a></h2>
+</div>
+
+<div class="home">
+
+  <p>AreaRakshak is silent guardian of your neighbourhood</p>
+  <div class="rakshak-init">
+    <p>Want to Become one? Go Ahead.</p>
+  </div>
+  <div class="rakshak-bano">
+    <form id="rakshak-form" action="/" method="POST">{% csrf_token %}
+      <table class="ratingsTable">
+        <tr>
+          <td>
+            <div class="starLabel" id="infraLabel">
+              <p>1. Infrastructure</p>
+            </div>
+          </td>
+          <td>
+            <div class="infraRating">
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <input id="rating1" type="radio" name="rating" value="1">
+                      <label for="rating1"><span>1</span></label>
+                    </div>
+                    <input id="rating2" type="radio" name="rating" value="2">
+                    <label for="rating2"><span>2</span></label>
+                  </div>
+                  <input id="rating3" type="radio" name="rating" value="3">
+                  <label for="rating3"><span>3</span></label>
+                </div>
+                <input id="rating4" type="radio" name="rating" value="4">
+                <label for="rating4"><span>4</span></label>
+              </div>
+              <input id="rating5" type="radio" name="rating" value="5">
+              <label for="rating5"><span>5</span></label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="starLabel" id="securityLabel">
+              <p>2. Security</p>
+            </div>
+          </td>
+          <td>
+            <div class="securityRating">
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <input id="rating1" type="radio" name="rating" value="1">
+                      <label for="rating1"><span>1</span></label>
+                    </div>
+                    <input id="rating2" type="radio" name="rating" value="2">
+                    <label for="rating2"><span>2</span></label>
+                  </div>
+                  <input id="rating3" type="radio" name="rating" value="3">
+                  <label for="rating3"><span>3</span></label>
+                </div>
+                <input id="rating4" type="radio" name="rating" value="4">
+                <label for="rating4"><span>4</span></label>
+              </div>
+              <input id="rating5" type="radio" name="rating" value="5">
+              <label for="rating5"><span>5</span></label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="starLabel" id="transLabel">
+              <p>3. Transportation</p>
+            </div>
+          </td>
+          <td>
+            <div class="transRating">
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <input id="rating1" type="radio" name="rating" value="1">
+                      <label for="rating1"><span>1</span></label>
+                    </div>
+                    <input id="rating2" type="radio" name="rating" value="2">
+                    <label for="rating2"><span>2</span></label>
+                  </div>
+                  <input id="rating3" type="radio" name="rating" value="3">
+                  <label for="rating3"><span>3</span></label>
+                </div>
+                <input id="rating4" type="radio" name="rating" value="4">
+                <label for="rating4"><span>4</span></label>
+              </div>
+              <input id="rating5" type="radio" name="rating" value="5">
+              <label for="rating5"><span>5</span></label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textfield" id="raksha-loc" placeholder="Enter location">
+          </td>
+          <td>
+            <input type="button" id="raksha-loc" value="Detect" class="raksha-button">
+          </td>
+        </tr>
+      </table>
+        <div style="width:100%;float:center;">
+            <input type="button" value="submit" id="raksha-submit" >
+        </div>
+    </form>
+
+  </div>
+</div>
+</html>
