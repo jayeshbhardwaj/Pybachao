@@ -39,26 +39,26 @@ $(document).ready(function(){
 
     <form id="rakshak-form" action="report/" method="POST">{% csrf_token %}
 
-      
+
       <div class="slick-class">
         <div class="slide">
           <p>Poor Safety?</p>
           <div data-role="content">
-            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  name="slider-1" id="slider-1"/>
+            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  id="slider-threat" name="slider-1"/>
           </div>
         </div>
 
         <div class="slide">
           <p>Bad Infrastructure?</p>
           <div data-role="content">
-            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  name="slider-2" id="slider-2"/>
+            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  id="slider-infra" name="slider-2"/>
           </div>
         </div>
 
         <div class="slide">
           <p>Transport issues?</p>
           <div data-role="content">
-            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  name="slider-3" id="slider-3"/>
+            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  id="slider-trans" name="slider-3"/>
           </div>
         </div>
 

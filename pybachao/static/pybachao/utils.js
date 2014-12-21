@@ -36,7 +36,9 @@ $(document).ready(function(){
   $('#rakshak-form').on('submit', function(event){
 
     console.log("form submitted!")  // sanity check
-    rakshak_report();
+    var loc = {};
+    getLocation();
+    //rakshak_report(loc);
     event.preventDefault();
   });
 
@@ -45,17 +47,35 @@ $(document).ready(function(){
 });
 
 
-function rakshak_report() {
+function getLocation() {
+  var position = {}
+  if (navigator.geolocation) {
+    position = navigator.geolocation.getCurrentPosition(rakshak_report);
+  } else {
+    message = "Geolocation is not supported by this browser.";
+    console.log(message);
+  }
+
+  return position;
+}
+
+
+function rakshak_report(position) {
   console.log("rakshak is working!") // sanity check
+
+
+
+  console.log(position);
+
   $.ajax({
     url : "report/", // the endpoint
     type : "POST", // http method
     data : {
-              latitude : 12.13,
-              longitude : 65.45,
-              transScore : 1,
-              threatScore : 1,
-              infraScore : 1,
+              latitude : position.coords.latitude,
+              longitude : position.coords.longitude,
+              transScore : $('#slider-trans').val(),
+              threatScore : $('#slider-threat').val(),
+              infraScore : $('#slider-infra').val(),
               addComments : "testing",
               placeId : 123
     }, // data sent with the post request
