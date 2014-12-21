@@ -1,129 +1,71 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
-
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;"/>
 <link rel="stylesheet" type="text/css" href="{% static 'pybachao/style.css' %}" />
 
-<script src="{% static 'pybachao/jquery.js' %}" type="text/javascript"></script>
-<script src="{% static 'pybachao/utils.js' %}" type="text/javascript"></script>
-<script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+<!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+<script src="{% static 'pybachao/jquery.mobile.min.js' %}"></script>
 
+<script src="{% static 'pybachao/jquery.js' %}"></script>
+<script src="{% static 'pybachao/utils.js' %}"></script>
+
+<script src="{% static 'pybachao/jquery.bxslider.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'pybachao/jquery.bxslider.css' %}" />
+
+<script>
+$(document).ready(function(){
+  $('.slick-class').bxSlider({
+    slideWidth: 400,
+    minSlides: 1,
+    maxSlides: 1,
+    slideMargin: 10
+  });
+});
 </script>
 
-
 <title>AreaRakshak</title>
-<div class="fadeIn">
-  <h2 class="login">Login with <a href="/">Email</a></h2>
-</div>
+
 
 <div class="home">
 
   <p>AreaRakshak is silent guardian of your neighbourhood</p>
   <div class="rakshak-init">
-    <p>Want to Become one? Go Ahead.</p>
+    <p>Want to Become one? Help us.</p>
   </div>
   <div class="rakshak-bano">
-    <form id="rakshak-form" action="/" method="POST">{% csrf_token %}
-      <table class="ratingsTable">
-        <tr>
-          <td>
-            <div class="starLabel" id="infraLabel">
-              <p>1. Infrastructure</p>
-            </div>
-          </td>
-          <td>
-            <div class="infraRating">
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <input id="rating1" type="radio" name="rating" value="1">
-                      <label for="rating1"><span>1</span></label>
-                    </div>
-                    <input id="rating2" type="radio" name="rating" value="2">
-                    <label for="rating2"><span>2</span></label>
-                  </div>
-                  <input id="rating3" type="radio" name="rating" value="3">
-                  <label for="rating3"><span>3</span></label>
-                </div>
-                <input id="rating4" type="radio" name="rating" value="4">
-                <label for="rating4"><span>4</span></label>
-              </div>
-              <input id="rating5" type="radio" name="rating" value="5">
-              <label for="rating5"><span>5</span></label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="starLabel" id="securityLabel">
-              <p>2. Security</p>
-            </div>
-          </td>
-          <td>
-            <div class="securityRating">
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <input id="rating1" type="radio" name="rating" value="1">
-                      <label for="rating1"><span>1</span></label>
-                    </div>
-                    <input id="rating2" type="radio" name="rating" value="2">
-                    <label for="rating2"><span>2</span></label>
-                  </div>
-                  <input id="rating3" type="radio" name="rating" value="3">
-                  <label for="rating3"><span>3</span></label>
-                </div>
-                <input id="rating4" type="radio" name="rating" value="4">
-                <label for="rating4"><span>4</span></label>
-              </div>
-              <input id="rating5" type="radio" name="rating" value="5">
-              <label for="rating5"><span>5</span></label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="starLabel" id="transLabel">
-              <p>3. Transportation</p>
-            </div>
-          </td>
-          <td>
-            <div class="transRating">
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <input id="rating1" type="radio" name="rating" value="1">
-                      <label for="rating1"><span>1</span></label>
-                    </div>
-                    <input id="rating2" type="radio" name="rating" value="2">
-                    <label for="rating2"><span>2</span></label>
-                  </div>
-                  <input id="rating3" type="radio" name="rating" value="3">
-                  <label for="rating3"><span>3</span></label>
-                </div>
-                <input id="rating4" type="radio" name="rating" value="4">
-                <label for="rating4"><span>4</span></label>
-              </div>
-              <input id="rating5" type="radio" name="rating" value="5">
-              <label for="rating5"><span>5</span></label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="textfield" id="raksha-loc" placeholder="Enter location">
-          </td>
-          <td>
-            <input type="button" id="raksha-loc" value="Detect" class="raksha-button">
-          </td>
-        </tr>
-      </table>
-        <div style="width:100%;float:center;">
-            <input type="button" value="submit" id="raksha-submit" >
+
+    <form id="rakshak-form" action="report/" method="POST">{% csrf_token %}
+
+      
+      <div class="slick-class">
+        <div class="slide">
+          <p>Poor Safety?</p>
+          <div data-role="content">
+            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  name="slider-1" id="slider-1"/>
+          </div>
         </div>
+
+        <div class="slide">
+          <p>Bad Infrastructure?</p>
+          <div data-role="content">
+            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  name="slider-2" id="slider-2"/>
+          </div>
+        </div>
+
+        <div class="slide">
+          <p>Transport issues?</p>
+          <div data-role="content">
+            <input type="range" value="0" min="0" max="10" step="1" data-highlight="true"  name="slider-3" id="slider-3"/>
+          </div>
+        </div>
+
+      </div>
+      <div style="width:100%;float:center;">
+        <input type="submit" value="submit" id="raksha-submit" >
+      </div>
     </form>
 
   </div>

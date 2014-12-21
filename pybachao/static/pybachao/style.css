@@ -85,173 +85,38 @@ input {
   display: none;
 }
 
-.infraRating{
-  display        : inline-block;
-  position       : relative;
-  height         : 24px;
-  background     : url('images/stars.png') repeat-x 0 0;
-  vertical-align : bottom;
-}
-
-.infraRating div{
-  float    : left;
-  position : relative;
-  height   : 24px;
-}
-
-.infraRating input{
-  position : relative;
-  z-index  : 1;
-  width    : 24px;
-  height   : 24px;
-  margin   : 0;
-  padding  : 0;
-  opacity  : 0;
-}
-
-.infraRating label{
-  position : absolute;
-  top      : 0;
-  left     : 0;
-  width    : 100%;
-  height   : 24px;
-}
-
-.infraRating span{
-  display : none;
-}
-
-.infraRating       input:checked       + label,
-.infraRating:hover input:checked:hover + label{
-  background : url('images/stars.png') repeat-x 0 -24px;
-}
-
-.infraRating:hover input:checked + label{
-  background : transparent;
-}
-
-.infraRating:hover input:hover + label{
-  background : url('images/stars.png') repeat-x 0 -48px;
-}
-
-
-
-.ratingsTable {
-  margin-left:auto;
-  margin-right:auto;
-  text-align: center;
-}
-
-
-.starLabel p{
-  font-size: 20px;
-  text-align: left;
-  color: #CCFF66;
-}
-
-
-.securityRating{
-  display        : inline-block;
-  position       : relative;
-  height         : 24px;
-  background     : url('images/stars.png') repeat-x 0 0;
-  vertical-align : bottom;
-}
-
-.securityRating div{
-  float    : left;
-  position : relative;
-  height   : 24px;
-}
-
-.securityRating input{
-  position : relative;
-  z-index  : 1;
-  width    : 24px;
-  height   : 24px;
-  margin   : 0;
-  padding  : 0;
-  opacity  : 0;
-}
-
-.securityRating label{
-  position : absolute;
-  top      : 0;
-  left     : 0;
-  width    : 100%;
-  height   : 24px;
-}
-
-.securityRating span{
-  display : none;
-}
-
-.securityRating       input:checked       + label,
-.securityRating:hover input:checked:hover + label{
-  background : url('images/stars.png') repeat-x 0 -24px;
-}
-
-.securityRating:hover input:checked + label{
-  background : transparent;
-}
-
-.securityRating:hover input:hover + label{
-  background : url('images/stars.png') repeat-x 0 -48px;
-}
-
-
-.transRating{
-  display        : inline-block;
-  position       : relative;
-  height         : 24px;
-  background     : url('images/stars.png') repeat-x 0 0;
-  vertical-align : bottom;
-}
-
-.transRating div{
-  float    : left;
-  position : relative;
-  height   : 24px;
-}
-
-.transRating input{
-  position : relative;
-  z-index  : 1;
-  width    : 24px;
-  height   : 24px;
-  margin   : 0;
-  padding  : 0;
-  opacity  : 0;
-}
-
-.transRating label{
-  position : absolute;
-  top      : 0;
-  left     : 0;
-  width    : 100%;
-  height   : 24px;
-}
-
-.transRating span{
-  display : none;
-}
-
-.transRating       input:checked       + label,
-.transRating:hover input:checked:hover + label{
-  background : url('images/stars.png') repeat-x 0 -24px;
-}
-
-.transRating:hover input:checked + label{
-  background : transparent;
-}
-
-.transRating:hover input:hover + label{
-  background : url('images/stars.png') repeat-x 0 -48px;
-}
 
 
 #raksha-submit{
   background-color: #B8E68A;
   border-radius: 5px;
   margin-top: 15px;
+}
+
+.slide p{
+  text-align: center;
+  display: block;
+  color: #FF9900;
+}
+
+.slide {
+  background-color: #808080;
+  border-radius: 8px;
+  border-style: hidden;
+  background-repeat: repeat-x;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#808080), to(#FFFFFF));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #FFFFFF, #808080);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #FFFFFF, #808080);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #FFFFFF, #808080);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #FFFFFF, #808080);
 }

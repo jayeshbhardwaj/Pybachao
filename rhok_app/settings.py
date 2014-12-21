@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'rhok_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bachao',
+        'NAME': 'my_safety',
         'USER': 'jayeshb',
         'PASSWORD': 'applepie',
         'HOST': ''
